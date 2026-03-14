@@ -206,13 +206,7 @@ export default function HomePage() {
         <p className="text-charcoal/60 mb-8 text-lg max-w-xl mx-auto">
           Habla con nuestros asesores o genera tu pre-cotización en segundos.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/cotizador"
-            className="bg-charcoal text-white px-8 py-4 rounded-lg font-semibold tracking-wide hover:bg-charcoal-light transition-colors"
-          >
-            Pre-cotizar ahora
-          </Link>
+        <div className="flex justify-center">
           <a
             href="https://wa.me/525573944084"
             target="_blank"
