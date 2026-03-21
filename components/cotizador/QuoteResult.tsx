@@ -411,7 +411,32 @@ export default function QuoteResultComponent({
           {downloading ? 'Generando PDF...' : 'Descargar Pre-cotización (PDF)'}
         </button>
         <a
-          href={`https://wa.me/525573944084?text=Hola%2C%20genere%20la%20pre-cotizaci%C3%B3n%20${quoteNum}%20en%20su%20sitio%20web%20y%20quisiera%20confirmarla.`}
+          href={(() => {
+            const items = result.items.map((item) => {
+              const desc = item.acabado ? `${item.modelo} — ${item.acabado}` : item.modelo
+              return `• ${item.producto}: ${desc}\n  ${item.ancho}m × ${item.alto}m | Cant: ${item.cantidad} | ${formatCurrency(item.totalItem)}`
+            }).join('\n')
+
+            const msg = [
+              `Hola Felipe! Generé esta pre-cotización en el sitio web de Ambienta Interiorismo:`,
+              ``,
+              `👤 Cliente: ${clientName || 'Sin nombre'}${clientPhone ? ` | Tel: ${clientPhone}` : ''}`,
+              `📋 Folio: ${quoteNum}`,
+              ``,
+              `🛍 PRODUCTOS:`,
+              items,
+              ``,
+              `💰 Subtotal: ${formatCurrency(result.subtotal)}`,
+              `   IVA (16%): ${formatCurrency(result.iva)}`,
+              `   TOTAL: ${formatCurrency(result.total)}`,
+              ``,
+              `💳 Anticipo requerido (60%): ${formatCurrency(result.total * 0.6)}`,
+              ``,
+              `Me gustaría confirmar esta cotización. ¿Me pueden contactar?`,
+            ].join('\n')
+
+            return `https://wa.me/525573944084?text=${encodeURIComponent(msg)}`
+          })()}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-5 py-4 rounded-xl font-semibold hover:bg-[#20BD5A] transition-colors text-sm"
