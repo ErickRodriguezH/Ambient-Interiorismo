@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const WA_NUMBER = '525573944084'
 const WA_MESSAGE = encodeURIComponent(
-  '¡Hola! Visité su sitio web y me gustaría recibir más información sobre sus productos y servicios de Ambienta Interiorismo.'
+  '¡Hola, Felipe! Visité su sitio web y me gustaría recibir más información sobre sus productos y servicios de Ambienta Interiorismo.'
 )
 
 export default function WhatsAppButton() {
