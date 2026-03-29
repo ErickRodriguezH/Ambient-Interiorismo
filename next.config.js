@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/tarjeta',     destination: '/tarjetas/ambienta/felipe', permanent: true },
+      { source: '/tarjeta-fdav', destination: '/tarjetas/fdav/felipe',    permanent: true },
+    ]
+  },
   async headers() {
     return [
       {
