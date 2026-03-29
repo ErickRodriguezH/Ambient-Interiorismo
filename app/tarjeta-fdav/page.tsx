@@ -277,41 +277,6 @@ export default function TarjetaFdavPage() {
                 </div>
               </a>
 
-              {/* email */}
-              <a
-                className="contact-item-fdav"
-                href="mailto:contacto@fdavtelecom.com"
-                style={{ textDecoration: 'none' }}
-              >
-                <div
-                  className="contact-icon-fdav"
-                  style={{
-                    width: 38,
-                    height: 38,
-                    borderRadius: 8,
-                    background: 'rgba(155,28,53,0.1)',
-                    border: '1px solid rgba(155,28,53,0.25)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg viewBox="0 0 24 24" width={18} height={18} fill="none" stroke="#C42040" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="M2 7l10 7 10-7" />
-                  </svg>
-                </div>
-                <div>
-                  <span style={{ fontSize: 8, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase', color: '#8A7880', display: 'block' }}>
-                    Correo
-                  </span>
-                  <span style={{ fontSize: 13, color: '#F5F0F2', display: 'block', marginTop: 2, fontFamily: 'var(--font-cormorant), serif', letterSpacing: 0.5 }}>
-                    contacto@fdavtelecom.com
-                  </span>
-                </div>
-              </a>
-
               {/* location */}
               <div className="contact-item-fdav" style={{ cursor: 'default' }}>
                 <div
