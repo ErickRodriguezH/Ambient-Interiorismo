@@ -21,11 +21,7 @@ export const metadata: Metadata = {
   description: 'Tarjeta de contacto digital · Diseño de Interiores CDMX · Persianas, Cortinas, Smart Film, Toldos, Pisos.',
 }
 
-const CARD_URL = 'https://ambient-interiorismo.vercel.app/tarjeta'
-
 export default function TarjetaPage() {
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(CARD_URL)}&color=111010&bgcolor=F2EDE4&margin=12&qzone=1`
-
   return (
     <div
       className={`${cormorant.variable} ${montserrat.variable}`}
@@ -337,95 +333,6 @@ export default function TarjetaPage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* ── QR CODE ── */}
-      <div
-        style={{
-          width: '100%',
-          maxWidth: 420,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 20,
-          animationDelay: '0.3s',
-          animation: 'floatIn 0.9s 0.3s cubic-bezier(0.22,1,0.36,1) both',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 4,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 8,
-              fontWeight: 600,
-              letterSpacing: 3,
-              textTransform: 'uppercase',
-              color: '#C9A84C',
-            }}
-          >
-            Compartir tarjeta
-          </div>
-          <div
-            style={{
-              width: 40,
-              height: 1,
-              background: 'linear-gradient(90deg, transparent, #C9A84C, transparent)',
-            }}
-          />
-        </div>
-
-        {/* QR box */}
-        <div
-          style={{
-            background: '#F2EDE4',
-            borderRadius: 12,
-            padding: 16,
-            border: '1px solid rgba(201,168,76,0.4)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 12,
-          }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={qrUrl}
-            alt="QR para compartir tarjeta de Felipe Rodríguez — Ambienta Interiorismo"
-            width={220}
-            height={220}
-            style={{ display: 'block' }}
-          />
-          <div
-            style={{
-              fontSize: 9,
-              fontWeight: 600,
-              letterSpacing: 2,
-              textTransform: 'uppercase',
-              color: '#1c1b1b',
-              textAlign: 'center',
-            }}
-          >
-            Escanea para ver la tarjeta
-          </div>
-        </div>
-
-        <div
-          style={{
-            fontSize: 10,
-            color: '#9a9080',
-            letterSpacing: 1,
-            textAlign: 'center',
-          }}
-        >
-          {CARD_URL}
         </div>
       </div>
     </div>
