@@ -135,7 +135,7 @@ export default function TarjetaGabrielaPage() {
                 Gabriela Valdez Chávez
               </div>
               <div style={{ fontSize: 9, fontWeight: 600, color: '#C9A84C', letterSpacing: 3, textTransform: 'uppercase', marginTop: 3 }}>
-                Asesora · Diseño de Interiores
+                Directora de Ventas
               </div>
             </div>
 
